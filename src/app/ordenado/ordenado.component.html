@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Listado de Posts</h1>
+    <div class="form-group">
+        <input
+        type="text"
+        class="forms-control"
+        placeholder="Buscar.."
+        [(ngModel)]="filterpost"
+        name="filterpost"
+      />
+    </div>
+  </div>
+  <div class="container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>TITULO</th>
+          <th>FECHA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of posts  | filterpost: filterpost" >
+          <td>{{ post.id }}</td>
+          <td>{{ post.titulo }}</td>
+          <td>{{ post.fecha }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

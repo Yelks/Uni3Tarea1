@@ -1,0 +1,19 @@
+<h1>Filtro personalizado</h1>
+<hr>
+<ul>
+    <li *ngFor="let valor of vector">
+      {{valor | test}}
+    </li>
+  </ul>
+  <h3>Números en inglés</h3>
+  <ul>
+    <li *ngFor="let valor of vector">
+      {{valor | test:'ingles'}}
+    </li>
+  </ul>
+  <h3>Números en portugués</h3>
+  <ul>
+    <li *ngFor="let valor of vector">
+      {{valor | test:'portugues'}}
+    </li>
+  </ul>
